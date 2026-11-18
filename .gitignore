@@ -1,0 +1,12 @@
+# Project docs kept local
+/PRD.md
+/CLAUDE.md
+/architecture.md
+
+# OS
+.DS_Store
+
+# Env files
+.env
+.env.*
+!.env.example
