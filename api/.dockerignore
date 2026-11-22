@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+var
+perf
+test
+.env
+.env.*
+*.env.example
+*.tsbuildinfo
+Dockerfile
+docker-compose*.yml
