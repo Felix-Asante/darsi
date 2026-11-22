@@ -27,7 +27,8 @@
     "migration:generate": "nest build && typeorm migration:generate -d dist/database/data-source.js",
     "migration:create": "typeorm migration:create",
     "school:create": "node dist/cli/create-school.js",
-    "seed:demo": "node dist/cli/seed-demo.js"
+    "seed:demo": "node dist/cli/seed-demo.js",
+    "seed:uk-demo": "node dist/cli/seed-uk-demo.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1173.0",

@@ -2,26 +2,11 @@ import { Module } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { parseArgs } from 'node:util';
 import { CoreModule } from '../core.module.js';
-import { AcademicsModule } from '../modules/academics/academics.module.js';
-import { AssessmentModule } from '../modules/assessment/assessment.module.js';
-import { CurriculumModule } from '../modules/curriculum/curriculum.module.js';
-import { ImportRows } from '../modules/imports/import-rows.js';
-import { PeopleModule } from '../modules/people/people.module.js';
-import { SchoolsModule } from '../modules/schools/schools.module.js';
-import { TimetablesModule } from '../modules/timetables/timetables.module.js';
+import { FEATURE_MODULES } from '../feature-modules.js';
 import { seedDemoSchool } from './demo-seed.js';
 
 @Module({
-  imports: [
-    CoreModule.register({ relay: false }),
-    SchoolsModule,
-    AcademicsModule,
-    PeopleModule,
-    CurriculumModule,
-    TimetablesModule,
-    AssessmentModule,
-  ],
-  providers: [ImportRows],
+  imports: [CoreModule.register({ relay: false }), ...FEATURE_MODULES],
 })
 class SeedModule {}
 
